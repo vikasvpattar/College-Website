@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TONTADARYA COLLEGE OF ENGINEERING</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/admission.css">
+
+</head>
+
+<body>
+    <nav>
+        <div class="container nav_container">
+            <a href="/index.html">TCE</a>
+            <ul class="nav_menu">
+                <li><a href="/index.html">HOME</a></li>
+                <li><a href="/courses.html">COURSES</a></li>
+                <li><a href="/placements.html">PLACEMENTS</a></li>
+                <li><a href="/about.html">ABOUT-US</a></li>
+                <li><a href="/admissionform.html">ADMISSION FORM</a></li>
+            </ul>
+            <button id="menu_button"><img src="/img/icons8-menu-24.png" alt="menu_button"></button>
+            <button id="menu_close"><img src="/img/close.png" alt="menu_close"></button>
+        </div>
+    </nav>
+    <div class="container1">
+        <div class="header">
+            <h2>Admission Form</h2>
+        </div>
+        <form id="form" class="form" action="vjn">
+            <div class="form-control">
+                <label for="fname">FIRST NAME</label>
+                <input type="text" placeholder="enter your name" id="fname" />
+
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="lname">Last NAME</label>
+                <input type="text" placeholder="enter your last name" id="lname" />
+
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="age">AGE</label>
+                <input type="number" placeholder="enter your age" id="age">
+
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="email">Email</label>
+                <input type="email" placeholder="enter your email" id="email" />
+
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="number">MOBILE NUMBER</label>
+                <input type="number" placeholder="enter your mobile number" id="number" />
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="course">Choose a course you want to get in:</label><br>
+
+                <select name="course" id="course">
+                    <option value="choose a course">CHOOSE A COURSE</option>
+                    <option value="cs">COMPUTER SCIENCE</option>
+                    <option value="civil">CIVIL ENGINEERING</option>
+                    <option value="electronics">ELECTRONICS ENGINEERING</option>
+                    <option value="electrical">ELECTRICAL ENGINEERING</option>
+                </select>
+                <small class="crs">Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="pucname">PUC COLLEGE NAME</label>
+                <input type="text" placeholder="enter your puc college name" id="pucname" />
+
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="pucpercentage">PUC PERCENTAGE</label>
+                <input type="number" placeholder="enter your puc percentage" id="pucpercentage">
+
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="pucmarksfile">PUC Marks CARD</label>
+                <input type="file" id="pucmarksfile">
+
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="pucyear">PUC PASSING YEAR</label>
+                <input type="number" placeholder="enter your puc passing year" id="pucyear">
+
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="sslcname">SCHOOL NAME</label>
+                <input type="text" placeholder="enter your school name" id="sslcname" />
+
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="sslcpercentage">SSLC PERCENTAGE</label>
+                <input type="number" placeholder="enter your sslc percentage" id="sslcpercentage">
+
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="sslcmarksfile">SSLC Marks CARD</label>
+                <input type="file" id="sslcmarksfile">
+
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <label for="sslcyear">SSLC PASSING YEAR</label>
+                <input type="number" placeholder="enter your sslc passing year" id="sslcyear">
+
+                <small>Error message</small>
+            </div>
+
+            <div class="form-control">
+                <input type="checkbox" id="declaration" name="declaration" value="yes">
+                <label for="declaration"> I declare that above provided details are correct</label>
+                <small>Error message</small>
+            </div>
+
+
+
+            <div class="b">
+            <button type="submit" id="submit">Submit</button>
+            <button type="reset" id="reset">reset</button>
+        </div>
+        </form>
+    </div>
+    <footer>
+        <div class="container footer_container">
+            <div class="footer_1">
+                <a href="/index.html" class="footer_logo">
+                    <h4>TCE</h4>
+                </a>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium minus voluptas nisi facilis
+                    reprehenderit possimus iusto dignissimos voluptate. Debitis iure deleniti sapiente?</p>
+            </div>
+            <div class="footer_2">
+                <h4>links</h4>
+                <ul class="links">
+                    <li><a href="/index.html">HOME</a></li>
+                    <li><a href="/courses.html">COURSES</a></li>
+                    <li><a href="/placements.html">PLACEMENTS</a></li>
+                    <li><a href="/about.html">ABOUT-US</a></li>
+                    <li><a href="/admissionform.html">ADMISSION FORM</a></li>
+                </ul>
+            </div>
+            <div class="footer_3">
+                <h4>socials</h4>
+                <ul class="socials">
+                    <li><a href="#">facebook</a></li>
+                    <li><a href="#">twitter</a></li>
+                    <li><a href="#">instagram</a></li>
+                </ul>
+
+            </div>
+            <!-- <div class="footer_4">
+                <div class="footer_copyright container">
+                    <p> copyright &copy; TCE copyrights reserved</p>
+                </div>
+            </div> -->
+
+        </div>
+    </footer>
+    <div class="footer_4">
+        <div class="footer_copyright container">
+            <p> copyright &copy; TCE copyrights reserved</p>
+        </div>
+    </div>
+
+</body>
+<script src="/admission.js"></script>
+<script src="/main.js"></script>
+
+
+</html>
