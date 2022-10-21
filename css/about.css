@@ -1,0 +1,30 @@
+.about{
+    margin-top: 6rem;
+    background: var(--color-bg2);
+    padding: 20px;
+    border-radius: 49px;
+    margin-bottom: 2rem;
+}
+.about h2{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.about p{
+    text-align: justify;
+}
+div.list1 ul li{
+    list-style: circle;
+    margin-left: 1.5rem;
+}
+.list1{
+    margin-bottom: 2rem;
+}
+.chart{
+    margin-bottom: 2rem;
+    background: var(--color-bg2);
+    padding: 20px;
+    border-radius: 49px;
+}
+.chart img{
+    border-radius: 49px;
+}

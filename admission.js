@@ -20,11 +20,36 @@ const declaration = document.getElementById('declaration');
 
 form.addEventListener('submit', e => {
 	e.preventDefault();
-	
-	checkInputs();
+	var validation = checkInputs();
+	if (validation)
+	swal("Successfully Registered!", "We will contact you shortly!", "success");
+	else
+	swal("Invalid input!", "please provide a valid input!", "error");
 });
 
+// const sendData=(sRate,count)=>{
+// 	if(sRate===count){
+// 		alert("successfull");
+// 	}
+// }
+
+
+// const successMsg=()=>{
+// 	let formCont=document.getElementsByClassName("form-control success");
+// 	var count=formCont.length-1;
+// 	for(var i=0;i<formCont.length;i++){
+// 		if(formCont[i]==="form-control success"){
+// 			var sRate=0+1;
+// 			console.log(sRate);
+// 			sendData(sRate,count);
+// 		}else{
+// 			return false;
+// 		}
+// 	}
+// }
+
 function checkInputs() {
+	var isvalid = new Array();
 	// trim to remove the whitespaces
 	const fnameValue = fname.value.trim();
 	const lnameValue = lname.value.trim();
@@ -40,92 +65,129 @@ function checkInputs() {
 	const pucmarksfileValue = pucmarksfile.value.trim();
 	const sslcmarksfileValue = sslcmarksfile.value.trim();
 	const declarationValue = declaration.value.trim();
-	
+
 	const courseValue = course.value.trim();
-	if(fnameValue=== '') {
+	if (fnameValue === '') {
 		setErrorFor(fname, 'first name cannot be blank');
+		isvalid.push(false);
+
 	} else {
 		setSuccessFor(fname);
+		isvalid.push(true);
 	}
-	if(lnameValue=== '') {
+	if (lnameValue === '') {
 		setErrorFor(lname, 'last name cannot be blank');
+		isvalid.push(false);
 	} else {
 		setSuccessFor(lname);
-	}
-	
-	if(emailValue === '') {
-		setErrorFor(email, 'Email cannot be blank');
-	} else if (!isEmail(emailValue)) {
-		setErrorFor(email, 'Not a valid email');
-	} else {
-		setSuccessFor(email);
-	}
-	
-	if(numberValue === '') {
-		setErrorFor(number, 'number cannot be blank');
-	} else {
-		setSuccessFor(number);
-	}
-	
-	if(ageValue === '') {
-		setErrorFor(age, 'age cannot be blank');
-	}else if(ageValue<=17){
-        setErrorFor(age, 'sorry you shold be above 17');
-    }
-      else{
-		setSuccessFor(age);
+		isvalid.push(true);
 	}
 
-    if(pucnameValue=== '') {
+	if (emailValue === '') {
+		setErrorFor(email, 'Email cannot be blank');
+		isvalid.push(false);
+	} else if (!isEmail(emailValue)) {
+		setErrorFor(email, 'Not a valid email');
+		isvalid.push(false);
+	} else {
+		setSuccessFor(email);
+		isvalid.push(true);
+	}
+
+	if (numberValue === '') {
+		setErrorFor(number, 'number cannot be blank');
+		isvalid.push(false);
+	} else {
+		setSuccessFor(number);
+		isvalid.push(true);
+	}
+
+	if (ageValue === '') {
+		setErrorFor(age, 'age cannot be blank');
+		isvalid.push(false);
+	} else if (ageValue <= 17) {
+		setErrorFor(age, 'sorry you shold be above 17');
+		isvalid.push(false);
+	}
+	else {
+		setSuccessFor(age);
+		isvalid.push(true);
+	}
+
+	if (pucnameValue === '') {
 		setErrorFor(pucname, 'college name cannot be blank');
+		isvalid.push(false);
 	} else {
 		setSuccessFor(pucname);
 	}
-    if(pucpercentageValue=== '') {
+	if (pucpercentageValue === '') {
 		setErrorFor(pucpercentage, 'puc marks cannot be blank');
+		isvalid.push(false);
 	} else {
 		setSuccessFor(pucpercentage);
+		isvalid.push(true);
 	}
-    if(pucyearValue=== '') {
+	if (pucyearValue === '') {
 		setErrorFor(pucyear, 'puc passing year cannot be blank');
+		isvalid.push(false);
 	} else {
 		setSuccessFor(pucyear);
+		isvalid.push(true);
 	}
-   if(sslcnameValue=== '') {
+	if (sslcnameValue === '') {
 		setErrorFor(sslcname, 'school name cannot be blank');
+		isvalid.push(false);
 	} else {
 		setSuccessFor(sslcname);
+		isvalid.push(true);
 	}
-    if(sslcpercentageValue=== '') {
+	if (sslcpercentageValue === '') {
 		setErrorFor(sslcpercentage, 'sslc marks cannot be blank');
+		isvalid.push(false);
 	} else {
 		setSuccessFor(sslcpercentage);
+		isvalid.push(true);
 	}
-    if(sslcyearValue=== '') {
+	if (sslcyearValue === '') {
 		setErrorFor(sslcyear, 'sslc passing year cannot be blank');
+		isvalid.push(false);
 	} else {
 		setSuccessFor(sslcyear);
+		isvalid.push(true);
 	}
-    if(pucmarksfileValue=== '') {
+	if (pucmarksfileValue === '') {
 		setErrorFor(pucmarksfile, 'sslc passing year cannot be blank');
+		isvalid.push(false);
 	} else {
 		setSuccessFor(pucmarksfile);
+		isvalid.push(true);
 	}
-    if(sslcmarksfileValue=== '') {
+	if (sslcmarksfileValue === '') {
 		setErrorFor(sslcmarksfile, 'sslc passing year cannot be blank');
+		isvalid.push(false);
 	} else {
 		setSuccessFor(sslcmarksfile);
+		isvalid.push(true);
 	}
-    if(courseValue=='choose a course') {
+	if (courseValue == 'choose a course') {
 		setErrorFor(course, 'you have to select a course');
+		isvalid.push(false);
 	} else {
 		setSuccessFor(course);
+		isvalid.push(true);
 	}
-    if(!(declaration.checked)){
-        setErrorFor(declaration, 'you have to declare');
-    }else {
+	if (!(declaration.checked)) {
+		setErrorFor(declaration, 'you have to declare');
+		isvalid.push(false);
+	} else {
 		setSuccessFor(declaration);
-}
+		isvalid.push(true);
+	}
+	if (isvalid.includes(false))
+		return false;
+	else
+		return true;
+	// successMsg();
 }
 
 
@@ -140,22 +202,7 @@ function setSuccessFor(input) {
 	const formControl = input.parentElement;
 	formControl.className = 'form-control success';
 }
-	
+
 function isEmail(email) {
 	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 }
-// const menu=document.querySelector(".nav_menu");
-// const menubtn=document.querySelector("#menu_button");
-// const closebtn=document.querySelector("#menu_close");
-
-// menubtn.addEventListener('click', ()=>{
-//     menu.style.display="flex";
-//     closebtn.style.display="inline-block";
-//     menubtn.style.display="none";
-// })
-
-// closebtn.addEventListener('click', ()=>{
-//     menu.style.display="none";
-//    closebtn.style.display="none";
-//     menubtn.style.display="inline-block";
-// });

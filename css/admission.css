@@ -64,11 +64,13 @@ body {
 	font-size: 14px;
 	padding: 10px;
 	width:100%;
+	color: rgb(49, 41, 41);
 }
 
 .form-control input[type="checkbox" i]{
-    width: min-content;
+	width: 18px;
     display: inline;
+    margin-bottom: 5px;
 }
 .form-control.error input[type="checkbox" i]{
     border: #e74c3c;
@@ -166,6 +168,16 @@ footer{
     margin-top: 2rem;
     color: white;
 }
+checkbox{
+	width: 10px;
+}
+.checkbox-container{
+	display: flex;
+	gap:1rem;
+	justify-content: flex-start;
+	
+}
+
 @media only screen and (max-width: 600px){
     .container1{
         width: 94%;
