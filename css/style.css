@@ -4,7 +4,7 @@
   border: 0;
   outline: 0;
   text-decoration: none;
-  list-style: none;
+ 
   box-sizing: border-box;
 }
 :root {
@@ -41,7 +41,7 @@ h3,
 h4,
 h5,
 h6 {
-  line-height: 1.2rem;
+  line-height: 1.6rem;
 }
 h1 {
   font-size: 2.4rem;
@@ -111,6 +111,7 @@ nav {
   display: flex;
   align-items: center;
   gap: 4rem;
+  list-style: none;
 }
 .nav_menu a {
   font-size: 0.9rem;
@@ -123,32 +124,41 @@ nav {
 /* -----------header------- */
 header {
   position: relative;
-  top: 5rem;
+  top: 8rem;
   overflow: hidden;
-  height: 74vh;
-  margin-bottom: 5rem;
+  height: max-content;
+  margin-bottom: 10rem;
+  text-align: justify;
 }
-.header_container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
+/* .header_container {
+  /* display: grid;
+  grid-template-columns: 1fr 1fr; */
+  /* align-items: center;
   gap: 5rem;
   height: 100%;
-}
+  margin-bottom: 2rem; */
+/* } */ */
 .header-left p {
   margin: 1rem 0 2.4rem;
   text-align: justify;
 }
 /* ---------image slider------- */
+.slides{
+ 
+  padding: 20px 0px;
+}
+
 .slider-container{
   position: relative;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 .arrow{
   position: absolute;
   cursor: pointer;
   color: black;
   background-color: white;
-  top: 4%;
+  top: 45%;
   padding: 8px 18px;
   border-radius: 50%;
   font-size: 25px;
@@ -166,6 +176,7 @@ header {
   background-color: rgba(0, 0, 0, 0.397);
   padding: 15px 0px;
   width: 100%;
+  bottom: 0;
 
 }
 .slide{
@@ -238,8 +249,6 @@ main {
   display: grid;
   grid-template-columns: 50% 50%;
   gap: 2rem;
-  /* justify-content: center;
-    align-items: center; */
 }
 .left_accredited {
   display: flex;
@@ -259,15 +268,27 @@ main {
 .accredited_container img {
   margin-top: 1rem;
 }
+/* -------------mission------------------ */
 .mission {
   display: grid;
   grid-template-columns: 50% 50%;
   gap: 2rem;
 }
-.mission p {
-  margin: 1rem 0;
-  text-align: left;
+
+.mision_container{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
 }
+.vission_container{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+/* why to choose tce....................... */
+
 .whytochoose {
   background-color: var(--color-sucess);
   margin-top: 1rem;
@@ -286,6 +307,7 @@ main {
 }
 .why p {
   margin-left: 2rem;
+  text-align: justify;
 }
 /* footer */
 footer {
@@ -306,6 +328,7 @@ footer {
 }
 footer ul li {
   margin-bottom: 0.5rem;
+  list-style: none;
 }
 footer ul li a:hover {
   text-decoration: underline;
@@ -374,15 +397,12 @@ footer ul li a:hover {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
-  main {
-    margin-top: 6rem;
-  }
   .mission {
     grid-template-columns: 1fr;
   }
-  .mission p {
+  /* .mission p {
     margin-left: 156px;
-  }
+  } */
   .why {
     grid-template-columns: 1fr;
   }
@@ -407,7 +427,7 @@ footer ul li a:hover {
     right: 3%;
   }
   header {
-    height: 100vh;
+    /* height: 100vh; */
   }
   .header_container {
     text-align: center;
@@ -416,7 +436,12 @@ footer ul li a:hover {
   }
   .header-left p {
     margin-bottom: 1.3rem;
+    text-align: justify;
   }
+  
+
+
+
   .rightcategories {
     grid-template-columns: 1fr;
     gap: 0.7rem;
@@ -427,22 +452,20 @@ footer ul li a:hover {
   }
   .category img {
     margin-top: 4px;
-    display: inline-block;
+    
   }
   .footer_container {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  .mission p {
-    margin: auto;
-    text-align: justify;
+  .mission {
+    margin-left: 20px;
+   
   }
   .mission h2 {
     margin-bottom: 1rem;
   }
-  .vission_container p {
-    text-align: center;
-  }
+  
   .whytochoose {
     padding: 0%;
     background: transparent;
@@ -451,10 +474,17 @@ footer ul li a:hover {
     width: 94%;
     margin-bottom: 10px;
   }
+  .why p{
+margin: auto;
+  }
   .categories h2 {
     text-align: center;
   }
   footer {
     text-align: center;
+  }
+  .footer_mobile{
+    display: flex;
+    justify-content: space-between;
   }
 }
